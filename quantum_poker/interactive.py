@@ -3,13 +3,10 @@
 #          Christian Johnsen <christian.johnsen97@gmail.com>,
 #          Vemund Falch <vemfal@gmail.com>
 
-from os.path import dirname, abspath
-import sys
-sys.path.append(dirname(abspath(__file__)))
 import matplotlib.pyplot as plt
-from Python.helpFiles import getUnentangledTag
-from Python.CustomButton import Button
-from Python.CustomTextBox import TextBox
+from quantum_poker.help_files import getUnentangledTag
+from quantum_poker.custom_button import Button
+from quantum_poker.custom_text_box import TextBox
 from numpy import array, concatenate, flip
 
 

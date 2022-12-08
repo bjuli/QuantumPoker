@@ -20,7 +20,7 @@ class InteractiveButtons:
         self.currentlyShowingPlayer = False
         self.playerGates = playerGates
         self.initialGates = initialGates
-        self.qubitsShowing=0
+        self.qubitsShowing = 0
 
         self.getPlayer = getPlayer
 
@@ -114,7 +114,7 @@ class InteractiveButtons:
         self.buttonIsGate = True
 
     def changeBasis(self, event):
-        self.basis = (self.basis+1)%2
+        self.basis = (self.basis + 1) % 2
         if self.basis == 0:
             self.interactiveContainer.setGateColor('Basis', self.interactiveContainer.getNormalColors()[0])
         else:
@@ -135,11 +135,11 @@ class InteractiveButtons:
         self.changeCurrentButton('Bell3')
         self.nQBits = 3
         self.nFilledQBits = 0
-        self.buttonIsGate=False
+        self.buttonIsGate = False
 
     def showHand(self, event, updateBoard=True):
         if self.currentlyShowingPlayer:
-            self.interactiveContainer.setShowHandButtonColor(self.interactiveContainer.getNormalColors()[0],)
+            self.interactiveContainer.setShowHandButtonColor(self.interactiveContainer.getNormalColors()[0], )
             self.interactiveContainer.updatePlayerGate({})
             self.currentlyShowingPlayer = False
         else:
@@ -166,7 +166,8 @@ class InteractiveButtons:
         if self.button is None:
             return False, ""
         isGate, button = False, ""
-        if qubit not in self.coords[0:self.nFilledQBits] and self.nFilledQBits < self.nQBits and qubit<self.qubitsShowing:
+        if qubit not in self.coords[
+                        0:self.nFilledQBits] and self.nFilledQBits < self.nQBits and qubit < self.qubitsShowing:
             self.coords[self.nFilledQBits] = qubit
             self.nFilledQBits += 1
         if self.nFilledQBits == self.nQBits:

@@ -5,7 +5,7 @@
 
 from numpy import inf
 from numpy.random import randint
-from tkinter import Tk, simpledialog
+# from tkinter import Tk , simpledialog
 # ----Get Inputs--------------------------------------------------------------------------------------------------------
 
 

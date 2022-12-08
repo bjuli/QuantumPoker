@@ -3,12 +3,9 @@
 #          Christian Johnsen <christian.johnsen97@gmail.com>,
 #          Vemund Falch <vemfal@gmail.com>
 
-from os.path import dirname, abspath
-import sys
-sys.path.append(dirname(abspath(__file__)))
-from Python.PokerGame import PokerGame
+from quantum_poker.poker_game import PokerGame
 import matplotlib.pyplot as plt
-from Python.helpFiles import getIntInput
+from quantum_poker.help_files import getIntInput
 from numpy import array, count_nonzero, nonzero, delete, flip
 
 

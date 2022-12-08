@@ -3,13 +3,11 @@
 #          Christian Johnsen <christian.johnsen97@gmail.com>,
 #          Vemund Falch <vemfal@gmail.com>
 
-from os.path import dirname, abspath
-import sys
-sys.path.append(dirname(abspath(__file__)))
-from Python.interactive import InteractiveContainer
-from Python.Board import Board
-from Python.Buttons import InteractiveButtons
-from Python.helpFiles import distributeGates
+
+from quantum_poker.interactive import InteractiveContainer
+from quantum_poker.board import Board
+from quantum_poker.buttons import InteractiveButtons
+from quantum_poker.help_files import distributeGates
 from numpy import amax, array, sum, empty, append, argwhere, copy, any, in1d, argsort, zeros
 from qiskit import execute, Aer
 from time import time

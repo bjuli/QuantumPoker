@@ -5,6 +5,7 @@
 
 from matplotlib.widgets import AxesWidget
 
+
 class Button(AxesWidget):
     """
     A GUI neutral button.
@@ -61,7 +62,7 @@ class Button(AxesWidget):
 
         self.connect_event('button_press_event', self._click)
         self.connect_event('button_release_event', self._release)
-        #self.connect_event('motion_notify_event', self._motion)
+        # self.connect_event('motion_notify_event', self._motion)
         ax.set_navigate(False)
         ax.set_facecolor(color)
         ax.set_xticks([])
@@ -127,7 +128,7 @@ class Button(AxesWidget):
 
     def disconnect(self, cid):
         """Remove the callback function with connection id *cid*."""
-        if not(self.isIterating):
+        if not (self.isIterating):
             try:
                 del self.observers[cid]
             except KeyError:
